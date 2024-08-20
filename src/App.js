@@ -1,23 +1,52 @@
-import {Button, ButtonGroup, Container, Row, Col} from './import.js';
+import {Button, ButtonGroup, Container, Row, Col, Image, Navbar} from './import.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import profile from './photos/profile-pic.jpg';
+
 
 
 function App() {
   return (
     <div className="App">
-      <Container>
+      
+        <Row>
+          {/* profile picture */}
+          <Col>
+          <Image src={profile} alt="Profile" fluid roundedCircle/>
+          </Col>
+
+          <Col xs={10} >
+          {/* button */}
+          <ButtonGroup aria-label = "modes" data-bs-theme="light">
+            <Button id= "music" variant = "primary"><i class="gg-music-note"></i></Button>
+            <Button variant = "primary">Light</Button>
+            <Button variant = "primary">Dark</Button>
+          </ButtonGroup>
+          </Col>
+
+        </Row>
+      
+
+      <Container fluid>
         <Row>
           <Col>
-          <img src="/photos/profile-pic.jpg" alt="Profile"></img>
+          <div className = "content">
+
+          <p id="myName" fluid>
+            Yingqi Chen
+          </p>
+
+
+          </div>
+            
           </Col>
-          <Col xs={8}>1 0f 2</Col>
+
           <Col>
-          {/* button */}
-            <ButtonGroup aria-label = "modes">
-            <Button variant = "secondary">Light</Button>
-            <Button variant = "secondary">Dark</Button>
-          </ButtonGroup>
+          Nothinng here
+          </Col>
+
+          <Col>
+          Nothing here
           </Col>
         </Row>
       </Container>
